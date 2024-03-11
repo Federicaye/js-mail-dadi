@@ -8,8 +8,24 @@ login.addEventListener('click', function () {
         let userEmail = document.getElementById('email').value;
         if (userEmail === usersEmail[i]) {
             check = true;
-            console.log (check);
+            console.log(check);
         }
     }
 
+})
+
+let randomNumber = document.getElementById('randomNumber');
+randomNumber.addEventListener('click', function () {
+    let userNumber = getRndInteger(1, 6);
+    console.log(userNumber);
+    let computerNumber = getRndInteger(1, 6);
+    console.log(computerNumber);
+    if (userNumber === computerNumber) {
+        console.log('parità');
+    } else if (userNumber > computerNumber){
+        console.log('hai vinto')
+    } else {
+        console.log('hai perso')
+    }
+    
 })
