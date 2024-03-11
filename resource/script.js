@@ -3,14 +3,27 @@ let login = document.getElementById('login');
 
 
 login.addEventListener('click', function () {
-    for (i = 0; i < usersEmail.length; i++) {
-        let check = false;
-        let userEmail = document.getElementById('email').value;
-        if (userEmail === usersEmail[i]) {
+    let userEmail = document.getElementById('email').value;
+    let messageLogin = document.getElementById('messageLogin');
+    let check = false;
+
+    for (let i = 0; i < usersEmail.length; i++) {
+        console.log(usersEmail[i]);    
+        if (userEmail === usersEmail[i]) {       
             check = true;
-            console.log(check);
+                    
         }
     }
+
+
+
+    // verificare se ho trovato la mail e inserire il messaggio
+    if (check){
+        messageLogin.innerHTML= 'ciao';
+    } else {
+        messageLogin.innerHTML= 'non sei registrato';
+    }
+    
 
 })
 
@@ -28,11 +41,14 @@ randomNumber.addEventListener('click', function () {
         console.log('hai perso')
     }
     let imgDadi = document.getElementById('dadiImg');
+   
     let dadiComputer = document.createElement('img');
     dadiComputer.setAttribute('src',`dadi/${computerNumber}.svg`);
     let dadiUser = document.createElement('img');
     dadiUser.setAttribute('src',`dadi/${userNumber}.svg`);
     imgDadi.appendChild(dadiComputer);
     imgDadi.appendChild(dadiUser);
+   
+   
 
 })
