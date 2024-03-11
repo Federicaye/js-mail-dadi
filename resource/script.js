@@ -31,8 +31,8 @@ randomNumber.addEventListener('click', function () {
     let dadiComputer = document.createElement('img');
     dadiComputer.setAttribute('src',`dadi/${computerNumber}.svg`);
     let dadiUser = document.createElement('img');
-    dadiComputer.setAttribute('src',`dadi/${userNumber}.svg`);
-    imgDadi.appendChild(dadiComputer, dadiUser);
-    /* imgDadi.appendChild(dadiUser); */
+    dadiUser.setAttribute('src',`dadi/${userNumber}.svg`);
+    imgDadi.appendChild(dadiComputer);
+    imgDadi.appendChild(dadiUser);
 
 })
