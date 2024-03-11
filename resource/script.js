@@ -27,5 +27,12 @@ randomNumber.addEventListener('click', function () {
     } else {
         console.log('hai perso')
     }
-    
+    let imgDadi = document.getElementById('dadiImg');
+    let dadiComputer = document.createElement('img');
+    dadiComputer.setAttribute('src',`dadi/${computerNumber}.svg`);
+    let dadiUser = document.createElement('img');
+    dadiComputer.setAttribute('src',`dadi/${userNumber}.svg`);
+    imgDadi.appendChild(dadiComputer, dadiUser);
+    /* imgDadi.appendChild(dadiUser); */
+
 })
